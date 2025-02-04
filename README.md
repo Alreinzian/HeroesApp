@@ -1,61 +1,78 @@
 # **HeroesApp**
 
-# **HeroesApp**
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## **Development Server**
-
-Follow these steps to set up and run the project:
-
-1. **Clone the repository** from:  
-   git clone https://github.com/Alreinzian/DC-Project.git
-2. **Install dependencies**:  
-   npm install
-3. **Start the backend server**:  
-   npm run backend
-4. **Run the application**:  
-   npm start  
-   Or alternatively:  
-   ng serve -o
-
-This will automatically open the application in your default web browser.
+**HeroesApp** is a web application that uses Angular along with a simulated server based on `json-server` for data management. Additionally, **Angular Material** and **PrimeFlex** have been integrated to enhance the user interface and layout of the application.
 
 ---
 
-# Angular Project with Angular Material and PrimeFlex
+## **Prerequisites**
+Before running the project, make sure you have installed:  
+- Node.js (Recommended version: 14 or higher)  
+- Angular CLI installed globally  
 
-This project uses Angular Material and PrimeFlex to enhance the user interface and layout of elements in the application.
+**Command to install Angular CLI:**  
+```sh
+npm install -g @angular/cli
+```  
 
-## 📦 Installation
+---
 
-Clone the repository and install the dependencies:
+## **Installation and Setup**
 
+### **1. Clone the Repository**  
+Run the following command in the terminal:  
+```sh
+git clone https://github.com/Alreinzian/DC-Project.git
+cd DC-Project
+```  
+
+### **2. Install Dependencies**  
+Install the required project dependencies:  
+```sh
 npm install
+npm install json-server
+```  
 
-## 🚀 Angular Material Setup
+### **3. Start the Backend Server**  
+Run this command to start the simulated server with `json-server`:  
+```sh
+npm run backend
+```  
 
-Angular Material has been integrated to provide styled and responsive components.
+### **4. Start the Application**  
+Run the Angular application with one of these commands:  
+```sh
+npm start
+```  
+Or alternatively:  
+```sh
+ng serve -o
+```  
 
-### Installing Angular Material
+---
 
-To install Angular Material in the project:
+## **Angular Material Setup**
 
+### **1. Install Angular Material**  
+If not already installed, use the following command:  
+```sh
 ng add @angular/material
+```  
+Select a predefined theme and confirm the recommended options.  
 
-Select a predefined theme and confirm the recommended options.
-
-In `angular.json`, make sure the Angular Material styles are included:
-
+### **2. Verify Styles in `angular.json`**  
+Ensure that Angular Material styles are included in the `angular.json` file:  
+```json
 "styles": [
   "src/styles.css",
   "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
 ]
+```  
 
-## Using Angular Material
-
-In the modules where Material components are needed, import them:
-
+### **3. Import Modules in Your Application**  
+To use Angular Material components, import them into the required modules:  
+```typescript
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -66,122 +83,57 @@ import { MatButtonModule } from '@angular/material/button';
   ]
 })
 export class AppModule { }
+```  
 
-### Example usage in a component:
-
+### **4. Example Usage in a Component**  
+Example of a toolbar with a menu button:  
+```html
 <mat-toolbar color="primary">
   <button mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
   <span>My Application</span>
 </mat-toolbar>
+```  
 
-## 🎨 Using PrimeFlex
+---
 
-PrimeFlex is a CSS utility library that simplifies responsive design.
+## **Using PrimeFlex**
 
-### Installing PrimeFlex
-
-To install PrimeFlex:
-
+### **1. Install PrimeFlex**  
+Run the following command to install PrimeFlex:  
+```sh
 npm install primeflex
+```  
 
-In the `angular.json` file, add the following line to include PrimeFlex:
-
+### **2. Add PrimeFlex to `angular.json`**  
+Include PrimeFlex in the `styles` section of `angular.json`:  
+```json
 "styles": [
   "src/styles.css",
   "node_modules/primeflex/primeflex.css"
 ]
+```  
 
-Now you can use PrimeFlex classes in your components for a flexible and responsive design.
+### **3. Example Usage in a Component**  
+Example of a layout using PrimeFlex:  
+```html
+<div class="p-grid">
+  <div class="p-col-12 p-md-6">
+    <p>Column 1</p>
+  </div>
+  <div class="p-col-12 p-md-6">
+    <p>Column 2</p>
+  </div>
+</div>
+```  
 
+---
 
-## **Database (Local JSON Data)**
+## **Conclusion**
+This project combines the power of Angular with:  
+✔ **Angular Material** for a modern UI  
+✔ **PrimeFlex** for a responsive layout  
+✔ **json-server** to simulate an API without requiring a real backend  
 
-```json
-{
-  "usuarios": [
-    {
-      "id": 1,
-      "usuario": "John Doe",
-      "email": "john.doe@gmail.com"
-    }
-  ],
-  "heroes": [
-    {
-      "id": "dc-batman",
-      "superhero": "Batman",
-      "publisher": "DC Comics",
-      "alter_ego": "Bruce Wayne",
-      "first_appearance": "Detective Comics #27",
-      "characters": "Bruce Wayne"
-    },
-    {
-      "id": "dc-superman",
-      "superhero": "Superman",
-      "publisher": "DC Comics",
-      "alter_ego": "Kal-El",
-      "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
-    },
-    {
-      "id": "dc-flash",
-      "superhero": "Flash",
-      "publisher": "DC Comics",
-      "alter_ego": "Jay Garrick",
-      "first_appearance": "Flash Comics #1",
-      "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
-    },
-    {
-      "id": "dc-green",
-      "superhero": "Green Lantern",
-      "publisher": "DC Comics",
-      "alter_ego": "Alan Scott",
-      "first_appearance": "All-American Comics #16",
-      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
-    },
-    {
-      "id": "dc-arrow",
-      "superhero": "Green Arrow",
-      "publisher": "DC Comics",
-      "alter_ego": "Oliver Queen",
-      "first_appearance": "More Fun Comics #73",
-      "characters": "Oliver Queen"
-    },
-    {
-      "id": "dc-wonder",
-      "superhero": "Wonder Woman",
-      "publisher": "DC Comics",
-      "alter_ego": "Princess Diana",
-      "first_appearance": "All Star Comics #8",
-      "characters": "Princess Diana"
-    },
-    {
-      "id": "dc-martian",
-      "superhero": "Martian Manhunter",
-      "publisher": "DC Comics",
-      "alter_ego": "J'onn J'onzz",
-      "first_appearance": "Detective Comics #225",
-      "characters": "Martian Manhunter"
-    },
-    {
-      "id": "marvel-spider",
-      "superhero": "Spider-Man",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Peter Parker",
-      "first_appearance": "Amazing Fantasy #15",
-      "characters": "Peter Parker"
-    },
-    {
-      "id": "marvel-iron",
-      "superhero": "Iron Man",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Tony Stark",
-      "first_appearance": "Tales of Suspense #39",
-      "characters": "Tony Stark"
-    }
-  ]
-}
-```
-
-This JSON structure serves as the local database for the project.
+Keep exploring and customizing the application according to your needs. Happy coding! 🚀  
