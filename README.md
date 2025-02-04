@@ -1,59 +1,120 @@
-# HeroesApp
+# **HeroesApp**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## Development server
+## **Development Server**
 
-To start a local development server, run:
+Follow these steps to set up and run the project:
 
-```bash
-ng serve
+1. **Clone the repository** from:  
+   ```sh
+   git clone https://github.com/Alreinzian/DC-Project.git
+   ```
+2. **Install dependencies**:  
+   ```sh
+   npm install
+   ```
+3. **Start the backend server**:  
+   ```sh
+   npm run backend
+   ```
+4. **Run the application**:  
+   ```sh
+   npm start
+   ```
+   Or alternatively:  
+   ```sh
+   ng serve -o
+   ```
+
+This will automatically open the application in your default web browser.
+
+## **Database (Local JSON Data)**
+
+```json
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "John Doe",
+      "email": "john.doe@gmail.com"
+    }
+  ],
+  "heroes": [
+    {
+      "id": "dc-batman",
+      "superhero": "Batman",
+      "publisher": "DC Comics",
+      "alter_ego": "Bruce Wayne",
+      "first_appearance": "Detective Comics #27",
+      "characters": "Bruce Wayne"
+    },
+    {
+      "id": "dc-superman",
+      "superhero": "Superman",
+      "publisher": "DC Comics",
+      "alter_ego": "Kal-El",
+      "first_appearance": "Action Comics #1",
+      "characters": "Kal-El"
+    },
+    {
+      "id": "dc-flash",
+      "superhero": "Flash",
+      "publisher": "DC Comics",
+      "alter_ego": "Jay Garrick",
+      "first_appearance": "Flash Comics #1",
+      "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
+    },
+    {
+      "id": "dc-green",
+      "superhero": "Green Lantern",
+      "publisher": "DC Comics",
+      "alter_ego": "Alan Scott",
+      "first_appearance": "All-American Comics #16",
+      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
+    },
+    {
+      "id": "dc-arrow",
+      "superhero": "Green Arrow",
+      "publisher": "DC Comics",
+      "alter_ego": "Oliver Queen",
+      "first_appearance": "More Fun Comics #73",
+      "characters": "Oliver Queen"
+    },
+    {
+      "id": "dc-wonder",
+      "superhero": "Wonder Woman",
+      "publisher": "DC Comics",
+      "alter_ego": "Princess Diana",
+      "first_appearance": "All Star Comics #8",
+      "characters": "Princess Diana"
+    },
+    {
+      "id": "dc-martian",
+      "superhero": "Martian Manhunter",
+      "publisher": "DC Comics",
+      "alter_ego": "J'onn J'onzz",
+      "first_appearance": "Detective Comics #225",
+      "characters": "Martian Manhunter"
+    },
+    {
+      "id": "marvel-spider",
+      "superhero": "Spider-Man",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Peter Parker",
+      "first_appearance": "Amazing Fantasy #15",
+      "characters": "Peter Parker"
+    },
+    {
+      "id": "marvel-iron",
+      "superhero": "Iron Man",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Tony Stark",
+      "first_appearance": "Tales of Suspense #39",
+      "characters": "Tony Stark"
+    }
+  ]
+}
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This JSON structure serves as the local database for the project.
