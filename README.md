@@ -1,5 +1,7 @@
 # **HeroesApp**
 
+# **HeroesApp**
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
 ## **Development Server**
@@ -7,27 +9,92 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Follow these steps to set up and run the project:
 
 1. **Clone the repository** from:  
-   ```sh
    git clone https://github.com/Alreinzian/DC-Project.git
-   ```
 2. **Install dependencies**:  
-   ```sh
    npm install
-   ```
 3. **Start the backend server**:  
-   ```sh
    npm run backend
-   ```
 4. **Run the application**:  
-   ```sh
-   npm start
-   ```
+   npm start  
    Or alternatively:  
-   ```sh
    ng serve -o
-   ```
 
 This will automatically open the application in your default web browser.
+
+---
+
+# Angular Project with Angular Material and PrimeFlex
+
+This project uses Angular Material and PrimeFlex to enhance the user interface and layout of elements in the application.
+
+## 📦 Installation
+
+Clone the repository and install the dependencies:
+
+npm install
+
+## 🚀 Angular Material Setup
+
+Angular Material has been integrated to provide styled and responsive components.
+
+### Installing Angular Material
+
+To install Angular Material in the project:
+
+ng add @angular/material
+
+Select a predefined theme and confirm the recommended options.
+
+In `angular.json`, make sure the Angular Material styles are included:
+
+"styles": [
+  "src/styles.css",
+  "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+]
+
+## Using Angular Material
+
+In the modules where Material components are needed, import them:
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+
+@NgModule({
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+  ]
+})
+export class AppModule { }
+
+### Example usage in a component:
+
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My Application</span>
+</mat-toolbar>
+
+## 🎨 Using PrimeFlex
+
+PrimeFlex is a CSS utility library that simplifies responsive design.
+
+### Installing PrimeFlex
+
+To install PrimeFlex:
+
+npm install primeflex
+
+In the `angular.json` file, add the following line to include PrimeFlex:
+
+"styles": [
+  "src/styles.css",
+  "node_modules/primeflex/primeflex.css"
+]
+
+Now you can use PrimeFlex classes in your components for a flexible and responsive design.
+
 
 ## **Database (Local JSON Data)**
 
