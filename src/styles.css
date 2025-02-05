@@ -16,3 +16,58 @@ body {
   background-color: rgba(0, 0, 0, 0.85) !important; /* Negro con opacidad */
   color: white !important;
 }
+/* Media Query para Smartphone */
+/* Media query para pantallas móviles y tablets a partir de 480px */
+@media (max-width: 768px) {
+  /* Ajustes para el título */
+  .mat-card-title {
+    font-size: 1.5rem !important; /* Ajuste del tamaño del texto */
+  }
+
+  .mat-card-subtitle {
+    font-size: 1.25rem !important; /* Ajuste del tamaño del texto del subtitulo */
+  }
+
+  /* Ajuste para la disposición de la imagen y la tarjeta de información */
+  .w-fit {
+    width: 80% !important; /* La imagen ocupará el 80% del ancho */
+    margin: 0 auto; /* Centrar la imagen */
+  }
+
+  .sm\:flex-row {
+    flex-direction: column !important; /* La dirección de la flexbox será columna */
+    align-items: center; /* Centra los elementos dentro de la columna */
+  }
+
+  .sm\:w-80 {
+    width: 100% !important; /* La tarjeta de información ocupará todo el ancho */
+  }
+
+  /* Aseguramos que los márgenes y el espaciado sean apropiados en pantallas pequeñas */
+  .mb-4 {
+    margin-bottom: 1rem !important; /* Espaciado entre la imagen y la tarjeta */
+  }
+
+  .p-4 {
+    padding: 1rem !important; /* Reducir padding para pantallas pequeñas */
+  }
+
+  /* Ajustes generales de la grid */
+  .grid {
+    grid-template-columns: 1fr !important; /* Asegura que los elementos se acomoden en una sola columna */
+    gap: 1rem !important; /* Espaciado entre los elementos de la grid */
+  }
+
+  /* Centrar la imagen */
+  .flex {
+    justify-content: center !important; /* Centra los elementos flexibles */
+    align-items: center !important; /* Alineación vertical */
+  }
+
+  /* Asegurarse de que la imagen esté centrada y no se salga de su contenedor */
+  .object-contain {
+    max-width: 100% !important;
+    max-height: 80vh !important; /* Limitar la altura máxima para que la imagen no ocupe demasiado espacio */
+    margin-bottom: 1rem !important; /* Añadir margen entre la imagen y la tarjeta */
+  }
+}

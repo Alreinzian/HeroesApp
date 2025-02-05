@@ -1,1 +1,61 @@
-<p>heroe-page works!</p>
+<ng-template #divLoading>
+  <div class="flex align-items-center justify-content-center h-20rem bg-gray-200 opacity-50">
+    <mat-spinner class="w-4rem h-4rem"></mat-spinner>
+  </div>
+</ng-template>
+
+<div *ngIf="hero; else divLoading" class="grid gap-4 p-4">
+  <mat-card class="w-full p-6 shadow-4 border-round-lg">
+    <mat-card-header class="flex flex-column align-items-start">
+      <mat-card-title class="text-4xl lg:text-5xl md:text-3xl sm:text-2xl font-bold">
+        {{ hero.alter_ego }}
+      </mat-card-title>
+      <span class="block h-3"></span>
+      <mat-card-subtitle class="text-2xl lg:text-3xl md:text-xl sm:text-lg text-secondary">
+        {{ hero.superhero }}
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+  <div class="w-full grid gap-4 justify-center items-center p-4 md:grid-cols-2 sm:grid-cols-1">
+    <!-- Sección de Imagen y Card Información -->
+    <div class="w-full flex justify-center items-center gap-4 flex-col sm:flex-row">
+      <!-- Imagen -->
+      <div class="w-fit flex justify-center items-center mb-4 sm:mb-0">
+        <img
+          [src]="hero | heroImage"
+          [alt]="hero.superhero"
+          class="w-full md:w-auto md:max-w-full md:h-auto border-round-lg shadow-4 max-h-96 object-contain"
+        />
+      </div>
+      <!-- Información -->
+      <mat-card class="p-4 shadow-3 border-round-lg w-full sm:w-80">
+        <mat-card-header class="flex flex-column align-items-start">
+          <mat-card-title class="text-2xl font-bold text-primary">Información</mat-card-title>
+          <span class="block h-2"></span>
+          <mat-card-subtitle class="text-md text-secondary">{{ hero.superhero }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content class="mt-3">
+          <mat-list dense>
+            <mat-list-item>
+              <strong>Primera Aparición:</strong> {{ hero.first_appearance }}
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <strong>Personajes:</strong> {{ hero.characters }}
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <strong>Publicado:</strong> {{ hero.publisher }}
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <strong>Alter ego:</strong> {{ hero.alter_ego }}
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
